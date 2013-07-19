@@ -1,0 +1,8 @@
+h2 Open Chat Rooms
+ul
+  li(ng-repeat='(id, room) in rooms')
+    a(href='/room/{{id}}') {{room.name}}
+
+form(ng-submit='newRoom()')
+  input(ng-model='roomName')
+  input(type='submit', value='Make A New Room')
